@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import Header from './components/Header';
+import BottomTabNavigator from './navigation/BottomTabNavigator';
 
 class App extends Component {
 
@@ -10,7 +11,7 @@ class App extends Component {
         return (
             <View style={container}>
                 <Header headerText={'RadioAtividade'}/>
-                <Text>RadioAtividade</Text>
+                <BottomTabNavigator />
             </View>
         );
     }
