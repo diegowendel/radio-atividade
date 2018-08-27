@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
+import Header from '../components/Header';
+
 class HomeScreen extends Component {
     render() {
-        const { screenStyle } = styles;
+        const { containerStyle, screenStyle } = styles;
         return (
-            <SafeAreaView style={screenStyle}>
-                <Text>Home Screen</Text>
-            </SafeAreaView>
+            <View style={containerStyle}>
+                <Header headerText={'RadioAtividade'}/>
+                <SafeAreaView style={screenStyle}>
+                    <Text>Home Screen</Text>
+                </SafeAreaView>
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
+    containerStyle: {
+        flex: 1
+    },
     screenStyle: {
         flex: 1,
         alignItems: 'center',

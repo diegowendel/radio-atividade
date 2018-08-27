@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import Header from './components/Header';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 
 class App extends Component {
 
     render() {
-        const { container } = styles;
+        const { containerStyle } = styles;
         return (
-            <View style={container}>
-                <Header headerText={'RadioAtividade'}/>
+            <View style={containerStyle}>
                 <BottomTabNavigator />
             </View>
         );
@@ -18,7 +16,7 @@ class App extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    containerStyle: {
         flex: 1
     }
 });
