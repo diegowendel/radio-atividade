@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 import Header from '../components/Header';
+import Player from '../components/Player/Player';
 
 class GalleryScreen extends Component {
     render() {
@@ -12,6 +13,7 @@ class GalleryScreen extends Component {
                 <SafeAreaView style={screenStyle}>
                     <Text>Gallery Screen</Text>
                 </SafeAreaView>
+                <Player />
             </View>
         );
     }

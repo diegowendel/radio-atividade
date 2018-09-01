@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
+import Player from './components/Player/Player'
 
 class App extends Component {
 
