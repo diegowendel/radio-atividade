@@ -26,5 +26,9 @@ export default StyleSheet.create({
     fontSize: 12,
     marginTop: 4,
     textAlign: 'center'
+  },
+  audio: {
+    width: 0,
+    height: 0
   }
 });
