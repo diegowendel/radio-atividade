@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 import Header from '../components/Header';
+import Player from '../components/Player/Player';
 
 class HomeScreen extends Component {
     render() {
@@ -12,6 +13,7 @@ class HomeScreen extends Component {
                 <SafeAreaView style={screenStyle}>
                     <Text>Home Screen</Text>
                 </SafeAreaView>
+                <Player />
             </View>
         );
     }
