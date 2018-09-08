@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 import Header from '../components/Header';
 import Player from '../components/Player/Player';
+import EditText from '../components/EditText/EditText';
 
 class MessageScreen extends Component {
     render() {
@@ -11,7 +12,9 @@ class MessageScreen extends Component {
             <View style={containerStyle}>
                 <Header headerText={'Contato'}/>
                 <SafeAreaView style={screenStyle}>
-                    <Text>Message Screen</Text>
+                    <EditText placeholder={'Nome'} />
+                    <EditText placeholder={'Email'} />
+                    <EditText placeholder={'Telefone'} />
                 </SafeAreaView>
                 <Player />
 
@@ -25,9 +28,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     screenStyle: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
+        flex: 1
     }
 });
 
