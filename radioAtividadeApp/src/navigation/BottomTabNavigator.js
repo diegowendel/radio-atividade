@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from 'react-navigation';
 import AboutScreen from '../screens/AboutScreen';
 import GalleryScreen from '../screens/GalleryScreen';
 import HomeScreen from '../screens/HomeScreen';
-import MessageScreen from '../screens/MessageScreen';
+import MessageScreen from '../screens/MessageScreen/MessageScreen';
 import SearchScreen from '../screens/SearchScreen';
  
 const BottomTabNavigator = createBottomTabNavigator(
