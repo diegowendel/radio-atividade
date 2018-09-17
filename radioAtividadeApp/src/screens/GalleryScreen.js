@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-import { FlatList, SafeAreaView, StyleSheet, Image, Text, View } from 'react-native'
+import { FlatList, SafeAreaView, StyleSheet, Image, View } from 'react-native'
 
-import data from '../lib/getGalleryImages'
-
-import Header from '../components/Header'
-import Player from '../components/Player/Player'
+import data from '../lib/getGalleryImages';
 
 class GalleryScreen extends Component {
   constructor () {
@@ -37,7 +34,6 @@ class GalleryScreen extends Component {
     const {containerStyle, screenStyle} = styles
     return (
       <View style={containerStyle}>
-        <Header headerText={'Galeria'}/>
         <SafeAreaView style={containerStyle}>
           <FlatList
             data={this.createRows(this.state.data, columns)}
@@ -55,7 +51,6 @@ class GalleryScreen extends Component {
             }}
           />
         </SafeAreaView>
-        <Player/>
       </View>
     )
   }

@@ -1,31 +1,34 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
+
+import Colors from '../constants/Colors';
 
 const Header = (props) => {
     const { textStyle, viewStyle } = styles;
     return (
-        <View style={viewStyle}>
+        <SafeAreaView style={viewStyle}>
             <Text style={textStyle}>{props.headerText}</Text>
-        </View>
+        </SafeAreaView>
     );
 };
 
 const styles = StyleSheet.create({
     textStyle: {
+        color: Colors.white,
         fontSize: 20
     },
     viewStyle: {
-        backgroundColor: '#F8F8F8',
+        backgroundColor: Colors.primaryColor,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 60,
+        height: 40,
         // Específico iOS
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 20 },
-        shadowOpacity: 0.2,
+        //shadowColor: '#000',
+        //shadowOffset: { width: 0, height: 20 },
+        //shadowOpacity: 0.2,
         // Específico Android
-        elevation: 2,
-        position: 'relative'
+        //elevation: 2,
+        //position: 'relative'
     }
 });
 
