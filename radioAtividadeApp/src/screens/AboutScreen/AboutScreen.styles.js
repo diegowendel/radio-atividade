@@ -4,9 +4,25 @@ export default StyleSheet.create({
   containerStyle: {
     flex: 1
   },
-  screenStyle: {
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  mapConatainer: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    margin: 5
+  },
+  screenStyle: {
+    flex: 1
+  },
+  textMedium: {
+    fontSize: 14,
+    marginTop: 10,
+    padding: 5,
+    textAlign: 'justify'
+  },
+  textSmall: {
+    fontSize: 12,
+    padding: 5,
+    textAlign: 'justify'
   }
 });
