@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import { FlatList, SafeAreaView, StyleSheet, Image, View } from 'react-native'
+import { FlatList, SafeAreaView, Image, View } from 'react-native'
 
-import data from '../lib/getGalleryImages';
+import data from '../../lib/getGalleryImages';
+import styles from './GalleryScreen.styles';
 
 class GalleryScreen extends Component {
+  
   constructor () {
     super()
     this.state = { data }
   }
-
 
   createRows(data, columns) {
     // Define a quantidade de linhas no grid
@@ -31,10 +32,9 @@ class GalleryScreen extends Component {
 
   render () {
     const columns = 3;
-    const {containerStyle, screenStyle} = styles
     return (
-      <View style={containerStyle}>
-        <SafeAreaView style={containerStyle}>
+      <View style={styles.containerStyle}>
+        <SafeAreaView style={styles.containerStyle}>
           <FlatList
             data={this.createRows(this.state.data, columns)}
             keyExtractor={item => item.id}
@@ -56,28 +56,4 @@ class GalleryScreen extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  containerStyle: {
-    flex: 1,
-  },
-  screenStyle: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  item: {
-    alignItems: "center",
-    flexBasis: 0,
-    flexGrow: 1,
-    margin: 5
-  },
-  imageItem: {
-    width: 128,
-    height: 128
-  },
-  itemEmpty: {
-    backgroundColor: "transparent"
-  }
-})
-
-export default GalleryScreen
+export default GalleryScreen;

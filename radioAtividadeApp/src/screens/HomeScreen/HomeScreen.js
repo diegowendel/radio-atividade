@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, Text, View } from 'react-native';
+
+import styles from './HomeScreen.styles';
 
 class HomeScreen extends Component {
     render() {
@@ -13,16 +15,5 @@ class HomeScreen extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    containerStyle: {
-        flex: 1
-    },
-    screenStyle: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-});
 
 export default HomeScreen;

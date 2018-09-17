@@ -1,17 +1,16 @@
 import React from 'react';
-import { Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import { createMaterialTopTabNavigator } from 'react-navigation';
 
-import AboutScreen from '../screens/AboutScreen';
-import GalleryScreen from '../screens/GalleryScreen';
-import HomeScreen from '../screens/HomeScreen';
+import AboutScreen from '../screens/AboutScreen/AboutScreen';
+import GalleryScreen from '../screens/GalleryScreen/GalleryScreen';
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import MessageScreen from '../screens/MessageScreen/MessageScreen';
-import SearchScreen from '../screens/SearchScreen';
+import SearchScreen from '../screens/SearchScreen/SearchScreen';
 import Colors from '../constants/Colors';
  
-const BottomTabNavigator = createMaterialTopTabNavigator(
+const TabNavigator = createMaterialTopTabNavigator(
   {
     Home: {
       screen: HomeScreen,
@@ -66,4 +65,4 @@ const BottomTabNavigator = createMaterialTopTabNavigator(
   }
 );
 
-export default BottomTabNavigator;
+export default TabNavigator;
