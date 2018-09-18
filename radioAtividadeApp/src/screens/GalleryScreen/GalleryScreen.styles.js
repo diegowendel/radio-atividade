@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   containerStyle: {
@@ -10,16 +10,16 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   item: {
-    alignItems: "center",
-    flexBasis: 0,
-    flexGrow: 1,
-    margin: 5
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+    margin: 1,
+    height: Dimensions.get('window').width / 3 // numColumns, approximate a square
   },
   imageItem: {
-    width: 128,
-    height: 128
+    ...StyleSheet.absoluteFillObject,
   },
   itemEmpty: {
-    backgroundColor: "transparent"
+    backgroundColor: 'transparent'
   }
 });
