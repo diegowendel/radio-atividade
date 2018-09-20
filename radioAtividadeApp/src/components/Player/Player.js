@@ -1,9 +1,11 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { View, Text, TouchableOpacity } from 'react-native';
+
+import Colors from '../../constants/Colors';
 import styles from './Player.styles';
-import Video from 'react-native-video'
-import tracks from '../../lib/getTracks'
+import Video from 'react-native-video';
+import tracks from '../../lib/getTracks';
 
 class Player extends React.Component {
   constructor() {
@@ -66,16 +68,14 @@ class Player extends React.Component {
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={this.log}>
-          <Icon name='angle-up' size={26}/>
+          <Icon color={Colors.white} name='angle-up' size={26}/>
         </TouchableOpacity>
         <View style={styles.detailsWrapper}>
           <Text style={styles.title} >{this.state.title}</Text>
           <Text style={styles.artist} >{this.state.artist}</Text>
         </View>
         <TouchableOpacity onPress={this.onPressPlayerControl.bind(this)}>
-          <Icon
-            name={ this.state.isPlaying ? 'pause-circle-o' : 'play-circle-o' }
-            size={36} />
+          <Icon color={Colors.white} name={ this.state.isPlaying ? 'pause-circle-o' : 'play-circle-o' } size={36} />
         </TouchableOpacity>
         { audio }
       </View>

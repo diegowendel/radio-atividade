@@ -1,1 +1,0 @@
-# Guia para configuração do ambiente de desenvolvimento

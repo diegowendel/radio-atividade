@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StatusBar, StyleSheet, SafeAreaView } from 'react-native';
 
-import BottomTabNavigator from './navigation/BottomTabNavigator';
-import Player from './components/Player/Player'
+import TabNavigator from './navigation/TabNavigator';
+import Colors from './constants/Colors';
+import Header from './components/Header';
+import Player from './components/Player/Player';
 
 class App extends Component {
 
     render() {
         const { containerStyle } = styles;
         return (
-            <View style={containerStyle}>
-                <BottomTabNavigator />
-            </View>
+            <SafeAreaView style={containerStyle}>
+              <StatusBar backgroundColor={Colors.primaryDarkColor} />
+              <Header headerText={'RadioAtividade'}/>
+              <TabNavigator />
+              <Player />
+            </SafeAreaView>
         );
     }
 }
