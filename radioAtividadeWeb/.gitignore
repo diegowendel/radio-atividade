@@ -1,0 +1,8 @@
+# dependencies
+node_modules
+
+# docker
+docker/data
+
+# misc
+package-lock.json
