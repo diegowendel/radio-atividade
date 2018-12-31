@@ -5,3 +5,15 @@
 .App .navbar-brand {
   font-weight: bold;
 }
+
+.carousel {
+  display: block;
+}
+
+.carousel-imagem {
+  width: 150px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

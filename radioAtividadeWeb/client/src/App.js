@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 import './App.css';
 
+import CarouselNoticias from './components/CarouselNoticias';
+import MusicPlayer from './components/MusicPlayer';
 import Routes from './routes/Routes';
 
 class App extends Component {
@@ -16,6 +18,7 @@ class App extends Component {
             <Navbar.Brand>
               <Link to="/">RadioAtividade</Link>
             </Navbar.Brand>
+            <MusicPlayer />
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
@@ -38,6 +41,7 @@ class App extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+        <CarouselNoticias />
         <Routes />
       </div>
     );
