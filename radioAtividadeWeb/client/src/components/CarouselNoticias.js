@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 
 class CarouselNoticias extends Component {
@@ -8,11 +9,18 @@ class CarouselNoticias extends Component {
 
     this.state = {
       index: 0,
-      direction: null
+      direction: null,
+      noticias: []
     }
 
     this.handleSelect = this.handleSelect.bind(this);
     this.renderNoticias = this.renderNoticias.bind(this);
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:5000/noticias/carousel').then(res => {
+      this.setState({ noticias: res.data });
+    });
   }
 
   handleSelect(selectedIndex, e) {
@@ -24,17 +32,15 @@ class CarouselNoticias extends Component {
 
   renderNoticias() {
     return (
-      <Carousel.Item>
-        <img
-            className="carousel-imagem"
-            src="img/imagem_1.jpg"
-            alt="First slide"
-          />
+      this.state.noticias.map(noticia => (
+        <Carousel.Item className="carousel-item">
+          <img src={noticia.url} alt={noticia.titulo} />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>{noticia.titulo}</h3>
+            <p>{noticia.descricao}</p>
           </Carousel.Caption>
-      </Carousel.Item>
+        </Carousel.Item>
+      ))
     );
   }
 

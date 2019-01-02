@@ -6,7 +6,6 @@ module.exports = (app) => {
     async audio(req, res) {
       const filePath = './client/public/audio/music.ogg';
       const stat = await getStat(filePath);
-      console.log(stat);
 
       // Informações sobre o tipo do conteúdo e o tamanho do arquivo
       res.writeHead(200, {

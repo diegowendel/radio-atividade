@@ -23,9 +23,6 @@ class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <LinkContainer to="/radio">
-                <NavItem>A Rádio</NavItem>
-              </LinkContainer>
               <LinkContainer to="/programacao">
                 <NavItem>Programação</NavItem>
               </LinkContainer>
@@ -41,8 +38,10 @@ class App extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <CarouselNoticias />
-        <Routes />
+        <div className="container">
+          <CarouselNoticias />
+          <Routes />
+        </div>
       </div>
     );
   }

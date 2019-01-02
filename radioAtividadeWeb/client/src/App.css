@@ -6,14 +6,31 @@
   font-weight: bold;
 }
 
-.carousel {
-  display: block;
+.clickable {
+  cursor: pointer;
 }
 
-.carousel-imagem {
-  width: 150px;
-  height: 100px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+/* Carousel */
+.carousel {
+  display: block;
+  height: 480px;
+  width: 1200px;
+}
+
+.carousel > .carousel-item > img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Galeria */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.875rem;
+}
+
+.gallery-thumbnail {
+  border-radius: 5px;
+  height: auto;
+  max-width: 100%;
 }
