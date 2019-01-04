@@ -3,24 +3,28 @@ module.exports = (app) => {
     imagens(req, res) {
       let imagens = [
         {
-          url: 'img/carousel/imagem_1.jpg',
-          titulo: null,
-          descricao: null
+          src: 'img/galeria/imagem_1.jpg'
         },
         {
-          url: 'img/carousel/imagem_2.jpg',
-          titulo: 'Instituições apoiadoras',
-          descricao: 'Auxiliam na tarefa de educar'
+          src: 'img/galeria/imagem_2.jpg'
         },
         {
-          url: 'img/carousel/imagem_3.jpg',
-          titulo: 'Campo de futebol',
-          descricao: null
+          src: 'img/galeria/imagem_3.jpg'
         },
         {
-          url: 'img/carousel/imagem_4.jpg',
-          titulo: 'Fachada da escola',
-          descricao: null
+          src: 'img/galeria/imagem_4.jpg'
+        },
+        {
+          src: 'img/galeria/imagem_5.jpg'
+        },
+        {
+          src: 'img/galeria/imagem_6.jpg'
+        },
+        {
+          src: 'img/galeria/imagem_7.jpg'
+        },
+        {
+          src: 'img/galeria/imagem_8.jpg'
         }
       ];
 

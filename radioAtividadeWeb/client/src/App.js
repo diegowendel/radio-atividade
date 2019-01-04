@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar fluid collapseOnSelect>
+        <Navbar fluid collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
               <Link to="/">RadioAtividade</Link>
@@ -23,11 +23,11 @@ class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <LinkContainer to="/programacao">
-                <NavItem>Programação</NavItem>
-              </LinkContainer>
               <LinkContainer to="/blog">
                 <NavItem>Blog</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/programacao">
+                <NavItem>Programação</NavItem>
               </LinkContainer>
               <LinkContainer to="/galeria">
                 <NavItem>Galeria</NavItem>
@@ -38,10 +38,12 @@ class App extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <div className="container">
-          <CarouselNoticias />
+        <section>
+            <CarouselNoticias />
+        </section>
+        <section className="container">
           <Routes />
-        </div>
+        </section>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
-import ModalGaleria from '../../components/ModalGaleria';
+import Lightbox from 'react-images';
 import './Galeria.css';
 
 class Galeria extends Component {
@@ -9,13 +9,15 @@ class Galeria extends Component {
     super(props);
 
     this.state = {
-      mostrarModal: false,
-      url: undefined,
+      isLightboxOpen: false,
+      currentImage: 0,
       imagens: []
     }
 
-    this.abrirModalImagem = this.abrirModalImagem.bind(this);
-    this.fecharModalImagem = this.fecharModalImagem.bind(this);
+    this.openLightbox = this.openLightbox.bind(this);
+    this.closeLightbox = this.closeLightbox.bind(this);
+    this.goToPrevious = this.goToPrevious.bind(this);
+    this.goToNext = this.goToNext.bind(this);
     this.renderImagens = this.renderImagens.bind(this);
   }
 
@@ -25,27 +27,40 @@ class Galeria extends Component {
     });
   }
 
-  abrirModalImagem(url) {
+  openLightbox(index, event) {
+    event.preventDefault();
     this.setState({
-      mostrarModal: true,
-      url: url
+      currentImage: index,
+      isLightboxOpen: true
     });
   }
 
-  fecharModalImagem() {
+  closeLightbox() {
     this.setState({
-      mostrarModal: false,
-      url: undefined
+      currentImage: 0,
+      isLightboxOpen: false
+    });
+  }
+
+  goToPrevious() {
+    this.setState({
+      currentImage: this.state.currentImage - 1
+    });
+  }
+
+  goToNext() {
+    this.setState({
+      currentImage: this.state.currentImage + 1
     });
   }
 
   renderImagens() {
     return (
-      this.state.imagens.map(imagem => (
-        <div className="col-sm-6 col-md-3 col-xl-2">
-          <div className="clickable gallery-card"
-            onClick={(e) => this.abrirModalImagem(imagem.url)}>
-            <img className="gallery-thumbnail" src={imagem.url} alt={imagem.titulo} />
+      this.state.imagens.map((imagem, index) => (
+        <div className="col-sm-6 col-md-3 col-xl-2" key={index}>
+          <div className="clickable gallery-card" onClick={(e) => this.openLightbox(index, e)}>
+            <img className="gallery-thumbnail" src={imagem.src} />
+            <div className="overlay"></div>
           </div>
         </div>
       ))
@@ -59,7 +74,14 @@ class Galeria extends Component {
         <div className="row">
           {this.renderImagens()}
         </div>
-        <ModalGaleria show={this.state.mostrarModal} handleClose={this.fecharModalImagem} src={this.state.url} />
+        <Lightbox
+          currentImage={this.state.currentImage}
+          images={this.state.imagens}
+          isOpen={this.state.isLightboxOpen}
+          onClose={this.closeLightbox}
+          onClickPrev={this.goToPrevious}
+          onClickNext={this.goToNext}
+        />
       </div>
     );
   }

@@ -10,11 +10,14 @@
   cursor: pointer;
 }
 
-/* Carousel */
+/****************************************/
+/*************** Carousel ***************/
+/****************************************/
 .carousel {
   display: block;
-  height: 480px;
-  width: 1200px;
+  height: 512px;
+  width: 100%;
+  padding: 0;
 }
 
 .carousel > .carousel-item > img {
@@ -22,7 +25,9 @@
   width: 100%;
 }
 
-/* Galeria */
+/****************************************/
+/*************** Galeria ****************/
+/****************************************/
 .gallery-card {
   position: relative;
   overflow: hidden;
@@ -33,4 +38,22 @@
   border-radius: 5px;
   height: auto;
   max-width: 100%;
+}
+
+.overlay {
+  border-radius: 5px;
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
 }

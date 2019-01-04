@@ -1,3 +1,11 @@
+html {
+  /* Workaround - Elimina "saltos" na Horizontal resultantes da renderização
+   * forçada pela barra de Scroll vertical que aparece em algumas telas e em
+   * outras não. 
+   */
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +14,12 @@ body {
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {

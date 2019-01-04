@@ -32,8 +32,8 @@ class CarouselNoticias extends Component {
 
   renderNoticias() {
     return (
-      this.state.noticias.map(noticia => (
-        <Carousel.Item className="carousel-item">
+      this.state.noticias.map((noticia, index) => (
+        <Carousel.Item className="carousel-item" key={index}>
           <img src={noticia.url} alt={noticia.titulo} />
           <Carousel.Caption>
             <h3>{noticia.titulo}</h3>
