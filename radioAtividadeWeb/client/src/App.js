@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './App.css';
 
 import CarouselNoticias from './components/CarouselNoticias';
+import Footer from './screens/Footer';
 import MusicPlayer from './components/MusicPlayer';
 import Routes from './routes/Routes';
 
@@ -13,12 +14,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar fluid collapseOnSelect fixedTop>
+        <Navbar fluid collapseOnSelect fixedTop className="navbar-dark">
           <Navbar.Header>
             <Navbar.Brand>
               <Link to="/">RadioAtividade</Link>
             </Navbar.Brand>
-            <MusicPlayer />
+            {/* <MusicPlayer /> */}
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
@@ -38,12 +39,13 @@ class App extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <section>
+        <section className="section-carousel">
             <CarouselNoticias />
         </section>
         <section className="container">
           <Routes />
         </section>
+        <Footer />
       </div>
     );
   }

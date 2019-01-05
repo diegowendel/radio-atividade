@@ -1,0 +1,34 @@
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.875rem;
+}
+
+.gallery-thumbnail {
+  border-radius: 5px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.overlay {
+  border-radius: 5px;
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.gallery-card:hover .overlay {
+  opacity: 1;
+}

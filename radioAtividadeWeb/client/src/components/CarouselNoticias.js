@@ -34,11 +34,7 @@ class CarouselNoticias extends Component {
     return (
       this.state.noticias.map((noticia, index) => (
         <Carousel.Item className="carousel-item" key={index}>
-          <img src={noticia.url} alt={noticia.titulo} />
-          <Carousel.Caption>
-            <h3>{noticia.titulo}</h3>
-            <p>{noticia.descricao}</p>
-          </Carousel.Caption>
+          <img className="center-block" src={noticia.url} alt={noticia.titulo} />
         </Carousel.Item>
       ))
     );

@@ -14,46 +14,111 @@
 /*************** Carousel ***************/
 /****************************************/
 .carousel {
-  display: block;
-  height: 512px;
+  height: 40vh;
   width: 100%;
+  margin: 0;
   padding: 0;
+  /* Não deixa imagem transbordar o tamanho do carousel */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.carousel > .carousel-item > img {
-  height: 100%;
+.carousel .carousel-item img {
+  display: block;
+  height: auto;
   width: 100%;
 }
 
 /****************************************/
-/*************** Galeria ****************/
+/**************** Navbar ****************/
 /****************************************/
-.gallery-card {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1.875rem;
+.navbar-dark {
+  background-color: #263238;
+  border-bottom-color: #eee;
 }
 
-.gallery-thumbnail {
-  border-radius: 5px;
-  height: auto;
-  max-width: 100%;
+.navbar-dark .navbar-header a {
+  color: #eee !important;
 }
 
-.overlay {
-  border-radius: 5px;
-  height: auto;
-  max-width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.navbar-dark .navbar-header a:hover {
+  color: #fff !important;
+}
+
+.navbar-dark .navbar-collapse .nav a {
+  color: #eee !important;
+}
+
+.navbar-dark .navbar-collapse .nav a:hover {
+  color: #fff !important;
+}
+
+.navbar-dark .navbar-collapse .nav .active a {
+  background-color: #eee;
+  color: #263238 !important;
+}
+
+/****************************************/
+/**************** Footer ****************/
+/****************************************/
+footer {
+  background-color:#263238;
   bottom: 0;
-  right: 0;
-  opacity: 0;
-  transition: .5s ease;
-  background: rgba(0, 0, 0, 0.4);
+  display: block;
+  left: 0;
+  position: relative;
+  padding:10px 0px 25px 0px;
+  min-height:200px;
+  width:100%;
 }
 
-.gallery-card:hover .overlay {
-  opacity: 1;
+footer p {
+  font-size: 13px;
+  color: #ccc;
+  padding-bottom: 0px;
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: #ccc;
+}
+
+/* :hover para o evento de passar o mouse sobre o link,
+ * :focus para manter o css após o clique.
+ */
+footer a:hover, a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bottom_border {
+  border-bottom:1px solid #323f45;
+  padding-bottom:20px;
+}
+
+.social_footer_ul {
+  display:table;
+  margin:15px auto 0 auto;
+  list-style-type:none;
+}
+
+.social_footer_ul li {
+  padding-left:20px;
+  padding-top:10px;
+  float:left;
+}
+
+.social_footer_ul li a {
+  color:#CCC;
+  border:1px solid #CCC;
+  padding:8px;
+  border-radius:50%;
+}
+
+.social_footer_ul li i {
+  width:20px;
+  height:20px;
+  text-align:center;
 }

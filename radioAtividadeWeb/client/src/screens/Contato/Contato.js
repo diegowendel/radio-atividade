@@ -85,7 +85,6 @@ class Contato extends Component {
           <div className="col-sm-6">
             <h2>Localização</h2>
             <h4>Avenida Nove de Julho, 745, Jardim Pereira do Amparo, Jacareí-SP, CEP 12.327-682.</h4>
-            <h4>Telefone: (12) 98189-8038 (WhatsApp)</h4>
             <div style={{ width: '400px', height: '400px' }}>
               <MapContainer />
             </div>
