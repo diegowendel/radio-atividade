@@ -70,7 +70,7 @@ class Galeria extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <h2>Galeria de imagens</h2>
+        <h1>Galeria de imagens</h1>
         <div className="row">
           {this.renderImagens()}
         </div>

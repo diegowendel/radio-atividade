@@ -1,13 +1,37 @@
 .App {
   text-align: center;
+  background-color: #fff;
 }
 
-.App .navbar-brand {
-  font-weight: bold;
+.App h1 {
+  background-color: #323f45;
+  border-radius: 5px;
+  color: #ddd !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.App h2 {
+  color: #555 !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.App h3 {
+  color: #666 !important;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }
 
 .clickable {
   cursor: pointer;
+}
+
+.center-text th {
+  text-align: center;
 }
 
 /****************************************/
@@ -29,6 +53,18 @@
   display: block;
   height: auto;
   width: 100%;
+}
+
+.section-carousel {
+}
+
+.section-routes {
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
 }
 
 /****************************************/
@@ -115,6 +151,11 @@ footer a:hover, a:focus {
   border:1px solid #CCC;
   padding:8px;
   border-radius:50%;
+}
+
+.social_footer_ul li a:hover, a:focus {
+  border-color: #fff;
+  color: #fff;
 }
 
 .social_footer_ul li i {

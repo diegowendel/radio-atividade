@@ -42,7 +42,7 @@ class App extends Component {
         <section className="section-carousel">
             <CarouselNoticias />
         </section>
-        <section className="container">
+        <section className="container section-routes">
           <Routes />
         </section>
         <Footer />

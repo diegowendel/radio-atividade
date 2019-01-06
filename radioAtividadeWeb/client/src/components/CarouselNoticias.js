@@ -44,7 +44,7 @@ class CarouselNoticias extends Component {
     const { index, direction } = this.state;
 
     return (
-      <div className="carousel">
+      <div className="carousel-container">
         <Carousel
           activeIndex={index}
           direction={direction}

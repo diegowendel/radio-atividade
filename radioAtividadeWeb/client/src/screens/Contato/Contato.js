@@ -33,10 +33,10 @@ class Contato extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-sm-6">
-            <h2>Fale Conosco</h2>
+            <h1>Fale Conosco</h1>
             <h4>Preencha o formulário abaixo</h4>
             <form onSubmit={this.handleSubmit}>
               <FormItem
@@ -83,9 +83,10 @@ class Contato extends Component {
             </form>
           </div>
           <div className="col-sm-6">
-            <h2>Localização</h2>
-            <h4>Avenida Nove de Julho, 745, Jardim Pereira do Amparo, Jacareí-SP, CEP 12.327-682.</h4>
-            <div style={{ width: '400px', height: '400px' }}>
+            <h1>Localização</h1>
+            <h4>Avenida Nove de Julho, 745, Jardim Pereira do Amparo.</h4>
+            <h4>Jacareí-SP, CEP 12.327-682.</h4>
+            <div className="container-mapa">
               <MapContainer />
             </div>
           </div>
